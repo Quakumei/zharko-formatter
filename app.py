@@ -42,7 +42,7 @@ def load_state(variables_pickle_file: str) -> dict:
     except FileNotFoundError as e:
         print("[WARN] : Config file not found, using default")
         default_config = {
-            "button_pressed_times": 0,
+            "button_pressed_times": 95,
         }
         update_state(default_config, variables_pickle_file)
         return default_config

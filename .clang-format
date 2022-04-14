@@ -53,7 +53,7 @@ DerivePointerAlignment: true
 ColumnLimit: 120
 PointerAlignment: Left
 MaxEmptyLinesToKeep: 1
-UseCRLF: true
+UseCRLF: false
 # InsertBraces: true # clang-format 15 + achtung! possible compilation errors
 
 IncludeCategories:
