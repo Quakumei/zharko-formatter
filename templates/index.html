@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AntiZharko</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../static/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon-16x16.png">
+    <link rel="manifest" href="../static/site.webmanifest">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../static/style.css">
+    <!-- Красивый код -->
+    <link rel="stylesheet" href="http://codemirror.net/lib/codemirror.css">
+    <!-- <link rel="stylesheet" href="https://codemirror.net/theme/material.css"> -->
+</head>
+
+<body>
+    <main>
+        <form method="POST" class="content">
+            <div class="jarko-heading">
+                <div>
+                    <h1><a href="/">ANTIZHARKO</a></h1>
+                    <p>Запихни свой код сюда, чтобы избавиться от претензий по CG!</p>
+                </div>
+                <div>
+                    <img src="{{jarkotik}}" alt="jarkotik.jpg" style="width:auto;" id="jarkotik">
+                </div>
+            </div>
+
+            <div class="flex-row">
+                <textarea name="input_ta" id="input_ta" cols="80" rows="10" autofocus
+                    placeholder="Запихни его прямо сюда!">{{code}}</textarea>
+                <button>Format!</button>
+                <textarea name="output_ta" id="output_ta" cols="80" rows="10" readonly
+                    placeholder="Здесь будет твой отформатированный код!">{{formatted_code}}</textarea>
+            </div>
+            <p><i>54 пункта CG в моей голове, ты хоть понимаешь, с кем связался, аспирант?</i></p>
+            <p>Сервисом воспользовались: {{button_pressed_times}} раз</p>
+            <a href="https://github.com/Quakumei/zharko-formatter">.clang-format link</a>
+        </form>
+    </main>
+</body>
+<script src="http://codemirror.net/lib/codemirror.js"></script>
+<script src="https://codemirror.net/mode/clike/clike.js"></script>
+<script src="https://codemirror.net/addon/display/placeholder.js"></script>
+<script>
+    var editor_1 = CodeMirror.fromTextArea(document.getElementById("input_ta"), {
+        lineNumbers: true,
+        lineWrapping: true,
+        inputStyle: "textarea",
+        showCursorWhenSelecting: true,
+        scrollbarStyle: null,
+        placeholder: "Запихни его прямо сюда!",
+        autofocus: true,
+        mode: "text/x-c++src",
+        // theme: "material"
+    });
+
+    var editor_2 = CodeMirror.fromTextArea(document.getElementById("output_ta"), {
+        lineNumbers: true,
+        lineWrapping: true,
+        inputStyle: "textarea",
+        readOnly: true,
+        showCursorWhenSelecting: true,
+        placeholder: "Здесь будет твой отформатированный код!",
+        scrollbarStyle: null,
+        mode: "text/x-c++src",
+        // theme: "material"
+    });
+
+    editor_1.setCursor(2, 2);     // это значит поместить курсор на 3 строку (отсчёт от 0), символ 3
+
+    var pos = editor_1.posFromIndex(3);  //получить координаты 3-ей позиции (строку и символ)
+    editor_1.setCursor(pos.line, pos.ch);
+    const myTimeout = setTimeout(function () { document.getElementById("jarkotik").src = "../static/jarkotik/jarkotik.jpg"; }, 1500);
+</script>
+
+
+</html>

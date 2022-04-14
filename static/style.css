@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+:root {
+    /* Typography */
+    --family:  'Rattani', 'Montserrat', sans-serif;
+
+    /* Colors */
+    /* Catpuccin https://github.com/catppuccin/catppuccin */
+    --rosewater: #F5E0DC;
+    --black: #161320;
+    --red:#F28FAD;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--rosewater);
+  color: var(--black);
+
+  margin: 0;
+  font-family: var(--family);
+
+  height: 100vh;
+  width: 100vw;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div.CodeMirror, div.CodeMirror-scroll, #input_ta, #output_ta, textarea {
+    resize: none;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.content h1, .content a, .content p {
+    align-self: center;
+    text-align: center;
+}
+.content h1 {
+    margin: 0;
+}
+
+a {
+    margin-top: 2rem;
+    text-decoration: underline;
+    color: inherit;
+    transition: all 0.1s ease-in-out;
+}
+a:hover {
+    color: var(--red);
+}
+
+
+
+
+.flex-row  {
+    display:flex;
+    flex-direction: row;
+    flex-grow:1;
+    margin-top: 2rem;
+}
+
+.content {
+    height: 90%;
+    width: 85%;
+    display:flex;
+    flex-direction: column;
+}
+
+button {
+    padding: 1rem 0.2rem;
+}
+.jarko-heading h1 {
+    margin: 0 1rem;
+}
+
+.jarko-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.jarko-heading > div {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+.jarko-heading img {
+    max-height: 128px;
+    max-width: 128px;
+}
+
+.jarko-heading p{
+    max-width: 350px;
+}
+
+.jarko-heading a{
+    text-decoration: none;
+    color: inherit;
+}
+
+@media (max-width:1080px){
+    .flex-row{
+        flex-direction: column;
+        max-height: 1500px;
+    }
+    .content h1, .content a, .content p {
+        display:block;
+        max-width: 400px;
+    }
+}

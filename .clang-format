@@ -1,0 +1,63 @@
+UseTab: false
+IndentWidth: 2
+AllowShortIfStatementsOnASingleLine: false
+IndentCaseLabels: false
+SpacesInAngles: true
+AlwaysBreakTemplateDeclarations: Yes
+#  PackConstructorInitializers: false # clang 14
+FixNamespaceComments: false
+IncludeBlocks: Merge
+NamespaceIndentation: All
+IncludeBlocks: Regroup
+
+#
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: Never
+AlwaysBreakAfterReturnType: None
+AlignAfterOpenBracket: DontAlign
+
+# InitializerList
+BreakConstructorInitializers: AfterColon
+PackConstructorInitializers: Never # clang 14
+# AllowAllConstructorInitializersOnNextLine: false # clang-format up to 9 - deprecated
+# ConstructorInitializerAllOnOneLineOrOnePerLine: false # deprecated
+BinPackArguments: false
+BinPackParameters: false
+
+# Taste
+# BreakBeforeBraces: Allman # Allman, Attach
+BreakBeforeBraces: Custom # Allman, Attach
+BraceWrapping:
+  AfterCaseLabel: true
+  AfterClass: true
+  AfterControlStatement: Always
+  AfterEnum: true
+  AfterFunction: true
+  AfterNamespace: true
+  AfterObjCDeclaration: true
+  AfterStruct: true
+  AfterUnion: true
+  AfterExternBlock : true
+  BeforeCatch: false
+  BeforeElse: false
+  BeforeLambdaBody: false
+  BeforeWhile: false
+  IndentBraces: false
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: false
+ColumnLimit: 120
+PointerAlignment: Left
+MaxEmptyLinesToKeep: 1
+UseCRLF: true
+# InsertBraces: true # clang-format 15 + achtung! possible compilation errors
+
+IncludeCategories:
+  - Regex:           '<[[:alnum:].]+>'
+    Priority:        -1
+  - Regex:           '.*'
+    Priority:        1
+    SortPriority:    0
+    # CaseSensitive:   true

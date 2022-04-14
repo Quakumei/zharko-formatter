@@ -1,0 +1,1 @@
+clang-format version 14.0.1 (https://github.com/ssciwr/clang-format-wheel 01a195cabfe309cf82a171aad2e1d9c17a1cbcfc)
