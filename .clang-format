@@ -25,7 +25,6 @@ PackConstructorInitializers: Never # clang 14
 # ConstructorInitializerAllOnOneLineOrOnePerLine: false # deprecated
 BinPackArguments: false
 BinPackParameters: false
-
 # Taste
 # BreakBeforeBraces: Allman # Allman, Attach
 BreakBeforeBraces: Custom # Allman, Attach
@@ -48,6 +47,8 @@ BraceWrapping:
   SplitEmptyFunction: false
   SplitEmptyRecord: false
   SplitEmptyNamespace: false
+
+DerivePointerAlignment: true
 ColumnLimit: 120
 PointerAlignment: Left
 MaxEmptyLinesToKeep: 1
