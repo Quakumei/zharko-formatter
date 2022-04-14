@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, abort
 import os
 import sys
 import hashlib
@@ -96,6 +96,11 @@ def formatted(code: str) -> str:
     cmd = f"{CLANG_FORMAT_EXEC} temp/{buffer_name}.cpp > temp/{buffer_name}_formatted.cpp"
     retcode = os.system(cmd)
     if retcode != 0:
+        # Save error information
+        cmd = f"mv temp/{buffer_name}.cpp temp/error.cpp"
+        retcode = os.system(cmd)
+        cmd = f"mv temp/{buffer_name}_formatted.cpp temp/error_formatted.cpp"
+        retcode = os.system(cmd)
         return "ERROR"
 
     cmd = f"rm temp/{buffer_name}.cpp temp/{buffer_name}_formatted.cpp"
@@ -115,6 +120,11 @@ def only_route():
 
 @ app.route('/', methods=["POST"])
 def button():
+    # Limit POST to ~750kb (around 20k lines)
+    cl = request.content_length
+    if cl is not None and cl > 3 * 256 * 1024:
+        abort(413)
+
     code = request.form.get('input_ta')
     if code == "":
         return redirect('/')

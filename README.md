@@ -53,6 +53,10 @@ MIT
 
 ---
 
+## Благодарности
+
+- [Влад](https://github.com/ce7er2s) - положил сайт в первый же день
+
 ## Автор
 
 > Автор &nbsp;&middot;&nbsp; [vk.com/druzhelubnyy](https://vk.com/id388032588) &nbsp;&middot;&nbsp;

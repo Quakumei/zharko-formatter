@@ -24,7 +24,9 @@ PackConstructorInitializers: Never # clang 14
 # AllowAllConstructorInitializersOnNextLine: false # clang-format up to 9 - deprecated
 # ConstructorInitializerAllOnOneLineOrOnePerLine: false # deprecated
 BinPackArguments: false
+AllowAllArgumentsOnNextLine: false
 BinPackParameters: false
+AlignTrailingComments: true
 # Taste
 # BreakBeforeBraces: Allman # Allman, Attach
 BreakBeforeBraces: Custom # Allman, Attach
