@@ -1,1 +1,1 @@
-web: gunicorn app:ZFServer
+web: gunicorn app:app
