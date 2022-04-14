@@ -11,11 +11,11 @@
 
 <p align="center">
   <a href="https://antizharko.herokuapp.com">Сайт</a> •
-  <a href="#key-features">Фичи</a> •
-  <a href="#download">.clang-format</a> •
-  <a href="#license">Лицензия</a> •
-  <a href="#credits">Стек</a> •
-  <a href="#contact">Автор</a>
+  <a href="#фичи">Фичи</a> •
+  <a href="#скачать">.clang-format</a> •
+  <a href="#лицензия">Лицензия</a> •
+  <a href="#стек">Стек</a> •
+  <a href="#автор">Автор</a>
 </p>
 
 ![screenshot](docs/demonstration.gif)
