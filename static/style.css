@@ -120,4 +120,11 @@ button {
         display:block;
         max-width: 400px;
     }
+    .jarko-heading > div{
+        display:flex;
+        flex-direction: column;
+    }
+    #logo {
+        display:none;
+    }
 }
