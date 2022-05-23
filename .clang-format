@@ -8,7 +8,7 @@ AlwaysBreakTemplateDeclarations: Yes
 FixNamespaceComments: false
 IncludeBlocks: Merge
 NamespaceIndentation: All
-IncludeBlocks: Regroup
+# IncludeBlocks: Regroup
 
 #
 AllowAllParametersOfDeclarationOnNextLine: false
@@ -28,27 +28,27 @@ AllowAllArgumentsOnNextLine: false
 BinPackParameters: false
 AlignTrailingComments: true
 # Taste
-# BreakBeforeBraces: Allman # Allman, Attach
-BreakBeforeBraces: Custom # Allman, Attach
-BraceWrapping:
-  AfterCaseLabel: true
-  AfterClass: true
-  AfterControlStatement: Always
-  AfterEnum: true
-  AfterFunction: true
-  AfterNamespace: true
-  AfterObjCDeclaration: true
-  AfterStruct: true
-  AfterUnion: true
-  AfterExternBlock : true
-  BeforeCatch: false
-  BeforeElse: false
-  BeforeLambdaBody: false
-  BeforeWhile: false
-  IndentBraces: false
-  SplitEmptyFunction: false
-  SplitEmptyRecord: false
-  SplitEmptyNamespace: false
+BreakBeforeBraces: Allman # Allman, Attach
+# BreakBeforeBraces: Custom # Allman, Attach
+# BraceWrapping:
+#   AfterCaseLabel: true
+#   AfterClass: true
+#   AfterControlStatement: Always
+#   AfterEnum: true
+#   AfterFunction: true
+#   AfterNamespace: true
+#   AfterObjCDeclaration: true
+#   AfterStruct: true
+#   AfterUnion: true
+#   AfterExternBlock : true
+#   BeforeCatch: false
+#   BeforeElse: false
+#   BeforeLambdaBody: false
+#   BeforeWhile: false
+#   IndentBraces: false
+#   SplitEmptyFunction: false
+#   SplitEmptyRecord: false
+#   SplitEmptyNamespace: false
 
 SpaceAfterTemplateKeyword: false
 DerivePointerAlignment: true
